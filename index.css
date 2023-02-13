@@ -5,8 +5,17 @@
 }
 
 :root {
+    --bodycolor: aliceblue;
+    --blue: #2978b5;
+    --grey-white: #444444;
+    --white: rgb(48, 48, 48);
+    --grey: #555555;
+    --skill-bg: #0f162e;
+    --skill-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.light {
     --bodycolor: #141725;
-    /* --bodycolor: #23283e; */
     --blue: #90a0d9;
     --grey-white: #cdcdff;
     --white: white;
@@ -14,16 +23,8 @@
     --skill-bg: #0f162e;
     --skill-shadow: 0px -10px 60px 10px rgb(88, 92, 143),
         0px 5px 14px 0px rgba(0, 0, 0, 0.18);
-}
 
-.light {
-    /* --bodycolor: white; */
-    --bodycolor: aliceblue;
-    --blue: #2978b5;
-    --grey-white: #444444;
-    --white: rgb(48, 48, 48);
-    --grey: #555555;
-    --skill-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    --color-calendar-graph-day-bg: #a5a5a5;
 }
 
 img {
@@ -33,14 +34,15 @@ img {
 a {
     all: unset;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--bodycolor);
     color: var(--white);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .blue {
@@ -130,9 +132,14 @@ body {
 }
 
 #sun {
-    width: 30px;
+    width: 25px;
     margin-left: 5px;
     margin-top: 3px;
+    /* background-color: white; */
+}
+#sun>img{
+    background-color: aliceblue;
+    border-radius: 50px;
 }
 
 #tog {
@@ -250,7 +257,7 @@ input:checked+.slider:before {
     position: fixed;
 }
 
-#tophome{
+#tophome {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -259,16 +266,19 @@ input:checked+.slider:before {
     margin: auto;
     /* border: 1px solid ; */
 }
-#tophome>div:nth-child(1){
+
+#tophome>div:nth-child(1) {
     width: 60%;
     padding: 20px 0px;
 }
-#tophome>div:nth-child(2){
+
+#tophome>div:nth-child(2) {
     width: 22%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* ----------------------------------------------------------------- */
 
 #topicon>a>div>img {
@@ -314,14 +324,16 @@ input:checked+.slider:before {
     border-radius: 20px;
 }
 
-.home-img {
+.home-img,
+.hello {
     padding: 10px;
     border-radius: 22px;
     border: 4px solid var(--blue);
     transition: 0.3s;
 }
 
-.home-img:hover {
+.home-img:hover,
+.hello:hover {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transform: scale(1.1);
 }
@@ -520,12 +532,12 @@ input:checked+.slider:before {
     background-position: 220px 0;
 }
 
-.react-activity-calendar {
+#github-streak-stats {
     width: 80%;
     margin: auto;
 }
 
-.react-activity-calendar img {
+#github-streak-stats img {
     border-radius: 10px;
 }
 
@@ -668,4 +680,99 @@ input:checked+.slider:before {
 
 #heart>img {
     width: 100%;
+}
+
+/* -----------------------------------git--------------------------------- */
+
+:root {
+    --color-calendar-graph-day-bg: #c7c7c7;
+    --color-calendar-graph-day-L1-bg: #39dd34;
+    --color-calendar-graph-day-L2-bg: #45a045;
+    --color-calendar-graph-day-L3-bg: #047526;
+    --color-calendar-graph-day-L4-bg: #0a4208;
+}
+
+rect.ContributionCalendar-day[data-level='0'] {
+    fill: var(--color-calendar-graph-day-bg);
+}
+
+rect.ContributionCalendar-day[data-level='1'] {
+    fill: var(--color-calendar-graph-day-L1-bg);
+}
+
+rect.ContributionCalendar-day[data-level='2'] {
+    fill: var(--color-calendar-graph-day-L2-bg);
+}
+
+rect.ContributionCalendar-day[data-level='3'] {
+    fill: var(--color-calendar-graph-day-L3-bg);
+}
+
+rect.ContributionCalendar-day[data-level='4'] {
+    fill: var(--color-calendar-graph-day-L4-bg);
+}
+
+.calendar .width-full>.float-left {
+    display: none;
+}
+
+.calendar {
+    width: auto;
+    font-family: Helvetica, arial;
+    border: 1px solid var(--grey);
+    border-radius: 3px;
+    min-height: 243px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.calendar-graph text.wday,
+.calendar-graph text.month {
+    font-size: 10px;
+    fill: var(--grey-white);
+}
+
+.text-small {
+    font-size: 12px;
+    color: var(--grey);
+}
+
+.calendar-graph {
+    padding: 5px 0 0;
+    height: 126px;
+    text-align: center;
+}
+
+.contrib-column {
+    padding: 15px 0;
+    text-align: center;
+    border-left: 1px solid var(--grey);
+    border-top: 1px solid var(--grey);
+    font-size: 11px;
+}
+
+.contrib-column-first {
+    border-left: 0;
+}
+
+.table-column {
+    display: table-cell;
+    width: 1%;
+    padding-right: 10px;
+    padding-left: 10px;
+    vertical-align: top;
+}
+
+.contrib-number {
+    font-weight: 300;
+    line-height: 1.3em;
+    font-size: 24px;
+    display: block;
+    color: var(--grey-white);
+}
+
+text.ContributionCalendar-label {
+    fill: var(--grey-white);
+    font-size: 11px;
 }
