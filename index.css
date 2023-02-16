@@ -85,6 +85,8 @@ body {
     background: -webkit-linear-gradient(0deg, transparent 50%, var(--blue) 50%);
     background-size: 450px 60px;
     transition: 0.5s;
+    display: flex;
+    margin: auto;
 }
 
 .und_small {
@@ -137,7 +139,8 @@ body {
     margin-top: 3px;
     /* background-color: white; */
 }
-#sun>img{
+
+#sun>img {
     background-color: aliceblue;
     border-radius: 50px;
 }
@@ -313,10 +316,16 @@ input:checked+.slider:before {
 
 #aboutone {
     display: flex;
+    justify-content: space-between;
+    width: 17%;
     margin: auto;
     flex-direction: column;
-    width: 28.5vh;
     cursor: pointer;
+}
+
+#aboutone>h1 {
+    display: flex;
+    justify-content: center;
 }
 
 #about img {
@@ -434,7 +443,7 @@ input:checked+.slider:before {
 }
 
 #exphead {
-    width: 34.5vh;
+    width: 18%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -442,8 +451,17 @@ input:checked+.slider:before {
     cursor: pointer;
 }
 
+#exphead>h1,
+#eduhead>h1,
+#codehead>h1,
+#prohead>h1,
+#touchhead>h1 {
+    display: flex;
+    justify-content: center;
+}
+
 #eduhead {
-    width: 29vh;
+    width: 16%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -510,7 +528,7 @@ input:checked+.slider:before {
 }
 
 #codehead {
-    width: 34.5vh;
+    width: 16%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -519,7 +537,7 @@ input:checked+.slider:before {
 }
 
 #prohead {
-    width: 26.5vh;
+    width: 16%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -617,7 +635,7 @@ input:checked+.slider:before {
 }
 
 #touchhead {
-    width: 38.5vh;
+    width: 19.4%;
     display: flex;
     justify-content: center;
     flex-direction: column;
