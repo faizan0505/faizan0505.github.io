@@ -6,7 +6,8 @@
 
 :root {
     --bodycolor: aliceblue;
-    --blue: #2978b5;
+    --blue: crimson;
+    /* --blue: #2978b5; */
     --grey-white: #444444;
     --white: rgb(48, 48, 48);
     --grey: #555555;
@@ -16,7 +17,8 @@
 
 .light {
     --bodycolor: #141725;
-    --blue: #90a0d9;
+    --blue: crimson;
+    /* --blue: #90a0d9; */
     --grey-white: #cdcdff;
     --white: white;
     --grey: #bdbddd;
@@ -42,7 +44,6 @@ html {
 body {
     background-color: var(--bodycolor);
     color: var(--white);
-    /* overflow-x: hidden; */
 }
 
 .blue {
@@ -60,7 +61,6 @@ body {
 #navbar {
     display: flex;
     padding: 40px 0px 20px 0px;
-    /* width: 99%; */
     margin: auto;
     justify-content: space-between;
     background-color: var(--bodycolor);
@@ -96,15 +96,6 @@ body {
     transition: 0.5s;
 }
 
-.und:hover,
-.und_small:hover,
-#skhead:hover .und,
-#exphead:hover .und,
-#eduhead:hover .und,
-#aboutone:hover .und {
-    background-position: 220px 0;
-}
-
 #nav-menu {
     display: flex;
     justify-content: space-evenly;
@@ -117,7 +108,6 @@ body {
     font-size: 17px;
     transition: 0.3s;
     cursor: pointer;
-    /* margin-right: 10vh; */
 }
 
 .nav-link:hover {
@@ -137,7 +127,6 @@ body {
     width: 25px;
     margin-left: 5px;
     margin-top: 3px;
-    /* background-color: white; */
 }
 
 #sun>img {
@@ -219,13 +208,6 @@ input:checked+.slider:before {
     font-size: 50px;
 }
 
-/* #home {
-    transition: all 0.5s ease-in-out;
-    width: 54%;
-    margin: auto;
-    text-align: center;
-} */
-
 #home {
     transition: all 0.5s ease-in-out;
     display: flex;
@@ -241,13 +223,6 @@ input:checked+.slider:before {
 .autotype {
     color: var(--grey-white);
 }
-
-/* #topicon {
-    width: 50%;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-} */
 
 #topicon {
     height: 60vh;
@@ -267,7 +242,6 @@ input:checked+.slider:before {
     text-align: left;
     width: 85%;
     margin: auto;
-    /* border: 1px solid ; */
 }
 
 #tophome>div:nth-child(1) {
@@ -323,11 +297,6 @@ input:checked+.slider:before {
     cursor: pointer;
 }
 
-#aboutone>h1 {
-    display: flex;
-    justify-content: center;
-}
-
 #about img {
     display: flex;
     border-radius: 20px;
@@ -337,7 +306,7 @@ input:checked+.slider:before {
 .hello {
     padding: 10px;
     border-radius: 22px;
-    border: 4px solid var(--blue);
+    border: 4px solid #2978b5;
     transition: 0.3s;
 }
 
@@ -372,14 +341,6 @@ input:checked+.slider:before {
 #skills {
     width: 85%;
     margin: auto;
-}
-
-#skhead {
-    width: 19vh;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    cursor: pointer;
 }
 
 #skillset {
@@ -424,7 +385,6 @@ input:checked+.slider:before {
         0px -2px 1px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
-
 .skills-card>img {
     width: 70%;
     margin: auto;
@@ -455,9 +415,23 @@ input:checked+.slider:before {
 #eduhead>h1,
 #codehead>h1,
 #prohead>h1,
-#touchhead>h1 {
+#touchhead>h1,
+#skhead>h1,
+#aboutone>span>h1 {
     display: flex;
     justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#exphead>h1:hover,
+#eduhead>h1:hover,
+#codehead>h1:hover,
+#prohead>h1:hover,
+#touchhead>h1:hover,
+#skhead>h1:hover,
+#aboutone>span>h1:hover {
+    color: var(--blue);
 }
 
 #eduhead {
@@ -502,13 +476,6 @@ input:checked+.slider:before {
     background-color: var(--grey);
 }
 
-/* .expdetail, .edudetail{
-    width: 50%;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0px 1px 3px 0px rgba(255,255,255,1),
-0px 1px 2px 0px rgba(0,0,0,0.24);
-} */
 .expdetail h4,
 .expdetail h3,
 .edudetail h4,
@@ -523,7 +490,7 @@ input:checked+.slider:before {
 }
 
 #code {
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
@@ -536,6 +503,31 @@ input:checked+.slider:before {
     cursor: pointer;
 }
 
+#code>div:nth-child(4) {
+    width: 50%;
+    margin: auto;
+}
+
+#github-streak-stats img {
+    margin: 2rem 0px;
+}
+
+#addGit {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#addGit>div:nth-child(1) {
+    width: 35%;
+}
+
+#addGit>div:nth-child(2) {
+    width: 58%;
+}
+
+
 #prohead {
     width: 16%;
     display: flex;
@@ -543,11 +535,6 @@ input:checked+.slider:before {
     flex-direction: column;
     margin: auto;
     cursor: pointer;
-}
-
-#codehead:hover .und,
-#prohead:hover .und {
-    background-position: 220px 0;
 }
 
 #github-streak-stats {
@@ -644,42 +631,79 @@ input:checked+.slider:before {
     transition: 0.5s;
 }
 
-.tound {
-    height: 4px;
-    background: -webkit-linear-gradient(0deg, transparent 50%, var(--blue) 50%);
-    background-size: 800px 60px;
-    transition: 0.5s;
-}
-
-#touchhead:hover .tound,
-.tound:hover {
-    background-position: 280px 0;
-}
-
-#touchicon {
-    width: 60%;
-    margin: auto;
+.contact-content {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
-#touchicon>div {
-    width: 5%;
-    transition: 0.3s;
+.contact-content>div:nth-child(1) {
+    width: 40%;
 }
 
-#touchicon>div:hover {
-    transform: scale(1.2);
+.contact-content>div:nth-child(2) {
+    width: 40%;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 1px 3px 0px var(--blue),
+        0px 1px 2px 0px rgba(0, 0, 0, 0.24);
 }
 
-#touchicon>div>a>img {
+#form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    border-radius: 8px;
 }
 
-#touchicon>div>a>img:hover {
-    box-shadow: 0px 0px 12px 0px var(--blue),
-        0px 45px 26px 0px rgba(0, 0, 0, 0.14);
+#form>h3,
+#form>p {
+    text-align: center;
+    text-decoration: underline;
+}
+
+#form>input,
+#msg {
+    margin: 10px 0px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--blue);
+}
+
+#ok {
+    font-size: medium;
+    transition: 0.3s;
+    background-color: var(--blue);
+    color: whitesmoke;
+}
+
+#ok:hover {
+    color: black;
+    background-color: rgb(223, 87, 115);
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#left>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#botimg>img {
+    border-radius: 20px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.head {
+    font-weight: bold;
+    margin: 5px 0px;
 }
 
 #bottom {
@@ -793,4 +817,15 @@ rect.ContributionCalendar-day[data-level='4'] {
 text.ContributionCalendar-label {
     fill: var(--grey-white);
     font-size: 11px;
+}
+
+.title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
 }
