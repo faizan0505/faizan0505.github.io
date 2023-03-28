@@ -45,6 +45,7 @@
     transform: translateZ(100px);
     background-size: cover;
     border-radius: 20px;
+    border-bottom: 2px solid var(--blue);
 }
 
 #pskill>div>p,
