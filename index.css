@@ -6,26 +6,20 @@
 
 :root {
     --bodycolor: aliceblue;
-    --blue: crimson;
-    /* --blue: #2978b5; */
+    /* --blue: crimson; */
+    --blue: #2978b5;
     --grey-white: #444444;
     --white: rgb(48, 48, 48);
     --grey: #555555;
-    --skill-bg: #0f162e;
-    --skill-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .light {
     --bodycolor: #141725;
-    --blue: crimson;
-    /* --blue: #90a0d9; */
+    /* --blue: crimson; */
+    --blue: #90a0d9;
     --grey-white: #cdcdff;
     --white: white;
     --grey: #bdbddd;
-    --skill-bg: #0f162e;
-    --skill-shadow: 0px -10px 60px 10px rgb(88, 92, 143),
-        0px 5px 14px 0px rgba(0, 0, 0, 0.18);
-
     --color-calendar-graph-day-bg: #a5a5a5;
 }
 
@@ -306,7 +300,8 @@ input:checked+.slider:before {
 .hello {
     padding: 10px;
     border-radius: 22px;
-    border: 4px solid #2978b5;
+    /* border: 4px solid #2978b5; */
+    border: 4px solid var(--blue);
     transition: 0.3s;
 }
 
@@ -338,64 +333,6 @@ input:checked+.slider:before {
     margin-left: 20px;
 }
 
-#skills {
-    width: 85%;
-    margin: auto;
-}
-
-#skillset {
-    width: 85%;
-    padding: 3%;
-    margin: auto;
-    background-color: var(--skill-bg);
-    border-radius: 20px;
-    box-shadow: var(--skill-shadow)
-}
-
-.setrow {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.setrow2 {
-    display: flex;
-    width: 80%;
-    margin: auto;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.skills-card {
-    color: black;
-    height: 135px;
-    width: 15%;
-    background-color: whitesmoke;
-    padding: 20px;
-    margin: 0px 20px;
-    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0px 0px 25px 6px rgba(0, 0, 0, 0.25) inset,
-        0px 2px 1px 1px rgba(255, 255, 255, 0.9) inset,
-        0px -2px 1px 0px rgba(0, 0, 0, 0.25) inset;
-}
-
-.skills-card>img {
-    width: 70%;
-    margin: auto;
-}
-
-.skills-card:hover {
-    transform: scale(1.1);
-    background-color: rgb(188, 235, 253);
-
-}
-
 #exp,
 #edu {
     width: 90%;
@@ -416,7 +353,7 @@ input:checked+.slider:before {
 #codehead>h1,
 #prohead>h1,
 #touchhead>h1,
-#skhead>h1,
+.skhead,
 #aboutone>span>h1 {
     display: flex;
     justify-content: center;
@@ -429,7 +366,7 @@ input:checked+.slider:before {
 #codehead>h1:hover,
 #prohead>h1:hover,
 #touchhead>h1:hover,
-#skhead>h1:hover,
+.skhead:hover,
 #aboutone>span>h1:hover {
     color: var(--blue);
 }
@@ -677,7 +614,8 @@ input:checked+.slider:before {
 
 #ok:hover {
     color: black;
-    background-color: rgb(223, 87, 115);
+    background-color: var(--color-calendar-graph-day-bg);
+    border: 1px solid grey;
 }
 
 #left {
@@ -692,8 +630,23 @@ input:checked+.slider:before {
     justify-content: space-around;
 }
 
+#botimg {
+    position: relative;
+    padding-left: 1rem;
+}
+
 #botimg>img {
-    border-radius: 20px;
+    border-radius: 12px;
+}
+
+.botoverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
 }
 
 .icons {
