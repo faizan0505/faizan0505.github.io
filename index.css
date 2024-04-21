@@ -721,10 +721,14 @@ input:checked + .slider:before {
 }
 
 #bottom {
-  width: 32%;
+  width: 50%;
   display: flex;
   margin: auto;
   color: var(--grey-white);
+}
+
+#bottom > h2 {
+  margin: auto;
 }
 
 #heart {
@@ -885,10 +889,7 @@ text.ContributionCalendar-label {
     font-size: 26px;
     margin-bottom: 20px;
   }
-  #bottom {
-    text-align: center;
-    margin: auto;
-  }
+  
   #aboutdetail {
     display: flex;
     flex-direction: column;
@@ -932,6 +933,18 @@ text.ContributionCalendar-label {
 
   #addGit > div:nth-child(2) {
     width: 90%;
+    margin: auto;
+  }
+  .contact-content {
+    flex-direction: column;
+  }
+  #touchhead,
+  #bottom {
+    width: 90%;
+  }
+  .contact-content > div:nth-child(1),
+  .contact-content > div:nth-child(2) {
+    width: 80%;
     margin: auto;
   }
 }
