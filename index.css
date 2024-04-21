@@ -146,21 +146,6 @@ body {
   }
 }
 
-/* @media only screen and (max-width:990px) {
-    #nav-menu {
-        display: none;
-      }
-      #menu-icon{
-        display: block;
-        border: 1px solid green;
-      }
-      #menu-icon .bar{
-        height: 1px;
-        width: 30px;
-        background-color: black;
-      }
-} */
-
 .nav-link {
   color: var(--grey-white);
   font-size: 17px;
@@ -562,11 +547,11 @@ input:checked + .slider:before {
 #allProjects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .project-card {
-  margin: 20px 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -863,6 +848,12 @@ text.ContributionCalendar-label {
 
 /* -----------------responsive-------------------- */
 
+/* @media (max-width: 1200px) {
+  #allProjects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
+
 @media (max-width: 990px) {
   #tophome {
     display: flex;
@@ -887,41 +878,11 @@ text.ContributionCalendar-label {
     align-items: center;
     order: 0;
   }
-  @media only screen and (max-width: 600px) {
-    #tophome > div:nth-child(2) {
-      width: 80%;
-    }
-    #topicon {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      position: fixed;
-      bottom: 0px;
-      width: 100%;
-      padding-top: 10px;
-      height: 5vh;
-      background-color: var(--bodycolor);
-      z-index: 1;
-    }
-    .contact-content {
-      flex-direction: column;
-    }
-    #touchhead,
-    #bottom {
-      width: 90%;
-    }
-    .contact-content > div:nth-child(1),
-    .contact-content > div:nth-child(2) {
-      width: 100%;
-    }
-    #nav-menu.show {
-      width: 100%;
-      line-height: 32px;
-    }
-    #navbar > div:nth-child(1) {
-      margin-left: 4vh;
-    }
+
+  #allProjects {
+    grid-template-columns: repeat(2, 1fr);
   }
+
   #tophome h1 {
     font-size: 26px;
     margin-bottom: 20px;
@@ -974,5 +935,44 @@ text.ContributionCalendar-label {
   #addGit > div:nth-child(2) {
     width: 90%;
     margin: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #tophome > div:nth-child(2) {
+    width: 80%;
+  }
+  #topicon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 10px;
+    height: 5vh;
+    background-color: var(--bodycolor);
+    z-index: 1;
+  }
+  .contact-content {
+    flex-direction: column;
+  }
+  #touchhead,
+  #bottom {
+    width: 90%;
+  }
+  .contact-content > div:nth-child(1),
+  .contact-content > div:nth-child(2) {
+    width: 100%;
+  }
+  #nav-menu.show {
+    width: 100%;
+    line-height: 32px;
+  }
+  #navbar > div:nth-child(1) {
+    margin-left: 4vh;
+  }
+  #allProjects {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
