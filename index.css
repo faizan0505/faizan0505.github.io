@@ -953,6 +953,7 @@ text.ContributionCalendar-label {
     height: 5vh;
     background-color: var(--bodycolor);
     z-index: 1;
+    margin: 0px;
   }
   .contact-content {
     flex-direction: column;
