@@ -976,4 +976,7 @@ text.ContributionCalendar-label {
   #allProjects {
     grid-template-columns: repeat(1, 1fr);
   }
+  #botimg{
+    margin: 10px 0px;
+  }
 }
