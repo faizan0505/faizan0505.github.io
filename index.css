@@ -569,17 +569,15 @@ input:checked + .slider:before {
 
 .proimg {
   margin-top: 10px;
-  /* border: 1px solid red; */
   width: 100%;
 }
 
 .proimg > img {
   border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .project-description {
-  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
