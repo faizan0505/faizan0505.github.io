@@ -9,7 +9,7 @@
 
 
 #skills {
-    width: 70%;
+    width: 85%;
     position: relative;
     text-align: center;
     margin: auto;
@@ -21,7 +21,7 @@
 #tool {
     display: grid;
     margin-top: 30px;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 
 #skills img {
